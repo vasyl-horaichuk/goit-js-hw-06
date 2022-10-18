@@ -1,14 +1,33 @@
 "use strict"
 
-console.log(document);
+/*
+  |==============================
+  | Рішення 1
+  |==============================
+*/
+// const categorylistWithId = document.querySelector('#categories');
+// console.log(`Number of categories: ${categorylistWithId.children.length}`);
 
-const listCategoryWithId = document.querySelector('#categories');
-console.log(listCategoryWithId);
+// const categoryItemByClassName = document.querySelectorAll('.item');
+// console.log(categoryItemByClassName);
 
-for (const elem of categories) { 
+// categoryItemByClassName.forEach((element) => {
+//     const titleByTagName = element.querySelector('h2');
+//     console.log('Category:', titleByTagName.textContent);
+//     const listByTagName = element.querySelector('ul')
+//     console.log('Elements:', listByTagName.children.length);
+// });
 
-}
+/*
+  |==============================
+  | Рішення 2
+  |==============================
+*/
 
-array.map((element, index, array) => {
-  
+const categoryItemByClassName = document.querySelectorAll('.item');
+console.log(`Number of categories: ${categoryItemByClassName.length}`);
+
+categoryItemByClassName.forEach(element => {
+    console.log(`Category: ${element.firstElementChild.textContent}`);
+    console.log(`Elements: ${element.lastElementChild.children.length}`)
 });
