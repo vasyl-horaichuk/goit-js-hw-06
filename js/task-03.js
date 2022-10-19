@@ -23,13 +23,15 @@ const images = [
 ];
 
 
-const galleryListByClassName = document.querySelector('.gallery');
+const galleryListByClassName = document.querySelector(".gallery");
 
-const markupGalleryImage = images.map(({ url, alt }) => 
-`<li class="item"><img src="${url}" alt="${alt}" width="370"></li>`).join("");
+const markupGallryImage = images.map(({ url, alt }) =>
+  `<li class="item"><img src="${url}" alt="${alt}" width="370"></li>`).join("");
 
-galleryListByClassName.insertAdjacentHTML("beforebegin", markupGalleryImage);
-console.log(galleryListByClassName);
+galleryListByClassName.insertAdjacentHTML('afterbegin', markupGallryImage);
 
-galleryListByClassName.style.display = 'flex';
-galleryListByClassName.style.listStile = 'none';
+// Style
+galleryListByClassName.style.display = "flex";
+galleryListByClassName.style.gap = "30px";
+galleryListByClassName.style.listStyle = "none";
+galleryListByClassName.style.justifyContent = "center";

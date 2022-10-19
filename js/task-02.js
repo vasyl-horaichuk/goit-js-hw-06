@@ -17,4 +17,4 @@ const markupForIteams = ingredients.map((element) => {
   itemRef.classList.add('item');
   itemRef.textContent = element;
   ingredientsListWithId.append(itemRef);
-});
+}); 
